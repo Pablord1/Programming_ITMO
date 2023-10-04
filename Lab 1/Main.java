@@ -33,7 +33,7 @@ public class Main {
         }
 
         //The following line is to check which values will take the x when executing the program
-        // System.out.println(Arrays.toString(x));
+        //System.out.println(Arrays.toString(x));
 
         //For task 3
         int xdimension = 10;
