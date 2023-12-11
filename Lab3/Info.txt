@@ -1,0 +1,5 @@
+Footman (frog) (talks and sits)
+Alice (human) (talks, knocks the door, walks, open doors, watch, jump)
+Cheshire Cat (cat) (it smiles)
+Cook (cooks) (human)
+Duchess (talks, holds baby)

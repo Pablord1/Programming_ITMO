@@ -1,0 +1,96 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Animal {
++String name
++makeNoise()
+}
+interface Cookable{
++Cook()
+}
+interface Grinable{
++Grin()
+}
+interface Holdable{
++Hold()
+}
+interface Jumpable{
++Jump()
+}
+interface Knokable{
++Knock()
+}
+interface Sittable{
++Sit()
+}
+interface Talkable{
++Talk()
+}
+interface Walkable{
++Walk()
+}
+interface Watchable{
++Watch()
+}
+Human <.. Main
+Frog <.. Main
+Cat <.. Main
+Talkable <|.. Frog
+Watchable <|.. Frog
+Sittable <|.. Frog
+Animal <|-- Frog
+Animal <|-- Cat
+Grinable <|.. Cat
+Sittable <|.. Cat
+Cookable <|.. Human
+Holdable <|.. Human
+Jumpable <|.. Human
+Knokable <|.. Human
+Sittable <|.. Human
+Talkable <|.. Human
+Walkable <|.. Human
+Watchable <|.. Human
+Age <.. Human
+
+class Human {
+-String name
+-Age age
++toString()
++Cook()
++Hold(String)
++Jump()
++Sit(String)
++Talk(String)
++Walk()
++Watch()
++Knock()
++hashCode()
++equals(Object)
+}
+
+enum Age {
+BABY
+KID
+TEENAGER
+ADULT
+SENIOR
+}
+
+class Main{
+{static}+main()
+}
+
+class Cat{
++makeNoise()
++Grin()
++Sit()
+}
+
+class Frog{
++makeNoise()
++Talk()
++Sit()
++Watch()
+}
+
+@enduml
