@@ -9,6 +9,10 @@ import java.io.FileNotFoundException;
 import java.io.File;
 import java.lang.Exception;
 
+class Cl {
+    public void makeNoise(){}
+}
+
 public class Main {
     public static void main(String[] args) throws IncorrectFileNameException, NotIntegerException, NotKnockingException, NegativeKnockException {
         Frog Footman = new Frog("Footman");
@@ -67,12 +71,18 @@ public class Main {
         Footman.Sit(Alice.toString());
         Alice.Knock(3);
 
-        Animal rat = new Animal("Rat") {
+        Cl rat = new Cl() {
             @Override
             public void makeNoise() {
                 System.out.println("Chchchchch");
             }
         };
+        try {
+            Cl newInst = rat.getClass().newInstance();
+            newInst.makeNoise();
+        } catch (InstantiationException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
 
         System.out.print("(A rat passes)\n- Rat: ");
         rat.makeNoise();
