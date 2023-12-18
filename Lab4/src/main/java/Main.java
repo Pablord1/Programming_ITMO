@@ -66,9 +66,21 @@ public class Main {
         Footman.Watch("sky");
         Footman.Sit(Alice.toString());
         Alice.Knock(3);
+
+        Animal rat = new Animal("Rat") {
+            @Override
+            public void makeNoise() {
+                System.out.println("Chchchchch");
+            }
+        };
+
+        System.out.print("(A rat passes)\n- Rat: ");
+        rat.makeNoise();
+
         Alice.Walk(Duchess.toString());
         Alice.Jump();
         Duchess.Hold(Baby.toString());
         Cook.Cook();
+        CheshireCat.Grin();
     }
 }

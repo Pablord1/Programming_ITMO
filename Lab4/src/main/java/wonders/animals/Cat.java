@@ -15,11 +15,24 @@ public class Cat extends Animal implements Grinable, Sittable {
 
     @Override
     public void Grin() {
-        System.out.println(this.name + " grins");
+        System.out.print(this.name + " grins");
+
+        class Smile {
+            void showTeeth(){
+                System.out.println(" (His smile shows many teeth)");
+            }
+        }
+
+        Smile smile = new Smile();
+        smile.showTeeth();
     }
 
     @Override
     public void Sit(String whom) {
         System.out.println(this.name + " sits next to " + whom);
+    }
+
+    public static class Mishi {
+
     }
 }
