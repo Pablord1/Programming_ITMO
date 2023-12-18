@@ -32,7 +32,22 @@ public class Cat extends Animal implements Grinable, Sittable {
         System.out.println(this.name + " sits next to " + whom);
     }
 
-    public static class Mishi {
+    public static class Mishi extends Animal implements Sittable {
 
+        private String name;
+
+        public Mishi(String name) {
+            super(name);
+        }
+
+        @Override
+        public void Sit(String whom) {
+            System.out.println(this.name + " sits next to " + whom);
+        }
+
+        @Override
+        public void makeNoise() {
+
+        }
     }
 }
